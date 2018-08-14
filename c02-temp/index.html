@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>c02-temp</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 文本插值 -->
+      <p>时间:{{time}}</p>
+      <p v-text="'地址：' + address"></p>
+      <template>
+        <p>天气：{{weather}}</p>
+      </template>
+      <!-- 2.html -->
+      <div v-html="htmlStr">
+      </div>
+      <!-- 3.v-bind -->
+      <!-- v-bind:src === :src -->
+      <!-- v-on:type 绑定事件 -->
+      <p>
+          <button type="button" v-on:click="isHidden = !isHidden">显示/隐藏</button>
+      </p>
+      <h3 v-if="!isHidden">阿拉蕾</h3>
+      <!-- v-if:条件渲染 -->
+      <img :class="{'hidden':isHidden}" v-bind:src="imglink" v-bind:title="imgTitle" width="500">
+      
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

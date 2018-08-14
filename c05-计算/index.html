@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>c03-text</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="number" v-model.number="a">
+      <label>+</label>
+      <input type="number" v-model.number="b">
+      <label>=</label>
+      <!-- 放入方法要加圆括号，在计算里不需要 -->
+      <label >{{(a+b).toFixed(2)}} - {{sum}} - {{total()}}</label>
+
+
+      <!-- 计算属性 -->
+      <form action="#"></form>
+      <!-- 计算属性 vs 帧听器 -->
+      <form action="">
+        <p>
+          <label >firstname</label>
+          <input type="text" v-model="firstName">
+        </p>
+        <p>
+          <label >lastname</label>
+          <input type="text" v-model="lastName">
+        </p>
+        <p>full name:{{fullName}} - {{getFullName}}</p>
+        <p>
+          <button type="button" @click="newFullName = 'Jocy Guo'">更改姓名</button>
+        </p>
+      </form>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

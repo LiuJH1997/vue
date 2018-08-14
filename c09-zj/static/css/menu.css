@@ -1,0 +1,16 @@
+@charset 'utf-8';
+.menu-list{
+    padding: 0;
+    list-style: none;
+    width: 500px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+.menu-list li{
+    width: calc(100% / 3);
+    height: 35px;
+    background:pink;
+}
